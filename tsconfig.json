@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "rootDir": "lib",
+    "outDir": "dist",
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["es2017", "dom"],
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "declaration": true,
+    "strict": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "lib/__tests__"
+  ]
+}
