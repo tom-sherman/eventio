@@ -1,14 +1,17 @@
 {
   "name": "eventio",
   "version": "0.0.1",
-  "description": "",
+  "description": "A tiny Typescript event emitter.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": [
+    "typed",
+    "event emitter"
+  ],
   "author": "Tom Sherman <the.tomsherman@gmail.com> (https://tom-sherman.com/)",
   "license": "MIT",
   "devDependencies": {
