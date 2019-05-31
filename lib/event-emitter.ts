@@ -1,6 +1,6 @@
 export type EventMap = Map<string, Function[]>
 
-export class EventEmitter {
+export default class EventEmitter {
   static readonly DEFAULT_MAX_LISTENERS = 10
   private _eventMap: EventMap = new Map()
   private _maxListeners: number = EventEmitter.DEFAULT_MAX_LISTENERS
