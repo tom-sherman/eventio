@@ -1,4 +1,4 @@
-import { EventEmitter, EventMap } from '../event-emitter'
+import EventEmitter, { EventMap } from '../event-emitter'
 
 let emitter: EventEmitter
 beforeEach(() => (emitter = new EventEmitter()))
