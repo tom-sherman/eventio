@@ -1,5 +1,5 @@
 {
-  "name": "eventio",
+  "name": "ts-eventio",
   "version": "0.0.1",
   "description": "A tiny Typescript event emitter.",
   "source": "lib/event-emitter.ts",
@@ -9,13 +9,21 @@
   "types": "dist/event-emitter.d.ts",
   "scripts": {
     "build": "microbundle",
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "typed",
     "event emitter"
   ],
   "author": "Tom Sherman <the.tomsherman@gmail.com> (https://tom-sherman.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tom-sherman/eventio"
+  },
+  "bugs": {
+    "url": "https://github.com/tom-sherman/eventio/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^24.0.13",
