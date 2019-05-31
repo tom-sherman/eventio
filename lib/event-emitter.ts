@@ -27,6 +27,10 @@ export default class EventEmitter {
         )
       }
 
+      if (this._eventMap.has('newListener')) {
+        this.emit('newListener', eventName, listener)
+      }
+
       if (!this._eventMap.has(eventName)) {
         this._eventMap.set(eventName, [])
       }

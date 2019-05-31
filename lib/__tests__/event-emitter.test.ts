@@ -124,6 +124,29 @@ describe('add listener', () => {
     let cb: Function
     expect(() => emitter.addListener('event', cb)).toThrow()
   })
+
+  test('should emit newListener and pass event name and listener as arguments', () => {
+    const onEvent = () => {}
+    const onListener = jest.fn((eventName: string, listener: Function) => {
+      expect(eventName).toBe('event')
+      expect(listener).toStrictEqual(onEvent)
+    })
+
+    emitter.on('newListener', onListener)
+    emitter.on('event', onEvent)
+    expect(onListener.mock.calls.length).toBe(1)
+  })
+
+  test('should not emit newListener when adding the first newListener cb', () => {
+    const onListener = jest.fn()
+
+    emitter.on('newListener', onListener)
+    expect(onListener.mock.calls.length).toBe(0)
+    emitter.on('newListener', onListener)
+    expect(onListener.mock.calls.length).toBe(1)
+    emitter.on('newListener', onListener)
+    expect(onListener.mock.calls.length).toBe(3)
+  })
 })
 
 describe('remove listener', () => {
